@@ -1,0 +1,17 @@
+VaccineID,VaccineName,Side effects,Manufacturer
+1,Johnson&Johnson,nausea,Johnson&Johnson
+2,Sinovac,nausea,Sinovav Biotech
+3,Oxford/AstraZeneca,dry mouth,Oxford/AstraZeneca
+4,Sinopharm/Beijing,dizziness,Sinopharm
+5,Sputnik V,dizziness,R-Pharm
+6,NULL,fatigue,Other
+7,Novavax,headache,Novavax
+8,Moderna,dry mouth,Moderna
+9,Pfizer/BioNTech,dry mouth,Pfizer/BioNTech
+10,CanSino,dry mouth,CanSino Biologics
+11,Covaxin,dry mouth,Bharat Biotech
+12,Abdala,dry mouth,Center for Genetic Engineering and Biotechnology
+13,Zifivax,dry mouth,Chinese Academy of Sciences
+14,Corbevax,nausea,Biological E. Limited
+15,COVIran Barekat,dry mouth,Shifa Pharmed Industrial Group
+16,SCB-2019,dry mouth,Clover Biopharmaceuticals
