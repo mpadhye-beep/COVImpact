@@ -46,24 +46,31 @@ Business Needs:
 Demographic Susceptibility: 
 https://www.mayoclinic.org/diseases-conditions/coronavirus/expert-answers/coronavirus-infectio 
 n-by-race/faq-20488802 
+
 NIH Business Needs: 
 https://pmc.ncbi.nlm.nih.gov/articles/PMC8607150/#s4 
+
 About the WHO: 
 https://www.who.int/about 
 
 Datasets: 
 Global Case count: 
 https://www.kaggle.com/datasets/imdevskp/corona-virus-report?select=full_grouped.csv 
+
 Variants of COVID-19: 
 https://www.kaggle.com/datasets/lumierebatalong/covid-19-variants-survival-data 
+
 Vaccinations by manufacturer: 
 https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vacc 
 inations by manufacturer.csv 
+
 Vaccinations by country:
 https://www.kaggle.com/datasets/gpreda/covid-world-vaccination-progress?select=country_vacc 
 inations.csv 
+
 Patients with comorbidities global:
 https://www.kaggle.com/datasets/shirmani/characteristics-corona-patients 
+
 US Patient details:
 https://www.kaggle.com/datasets/arashnic/covid19-case-surveillance-public-use-dataset 
 
