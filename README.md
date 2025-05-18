@@ -1,9 +1,20 @@
-Database application we plan to make: 
-We plan to build a database application that tracks details about COVID-19 by demographic through patient data,
-vaccination status of patients, and mutations of the virus in each country in the world. Our application will combine
-globally compiled data on the spread, health impacts, and prognosis of COVID-19 to summarize expected outcomes for a
-demographic (age, sex, or ethnicity) based on available information (country, vaccines available). We are trying to
-highlight where and for what demographic the prognosis for COVID-19 is worst, so help can be directed there.
+Why we chose this topic:
+With the pandemic now over, vast amounts of data are available on the case rates per country, patients registered in hospitals,
+and spread of COVID-19 variants, and vaccine use by country. In order for health organizations such as the WHO to get a better sense
+of how countries responded to the pandemic, a database is needed to compile country data, variant data, and vaccine data to cross tabulate
+results on intersections of these data. This intersection is represented by examples such as vaccinations per country by day and
+distribution of variants across different countries.
+We also wanted to connect patient data to the database so that local hospitals can upload their own registry of patients and look
+up how their patients related to global vaccinations. But due to HIPAA policies, real patient information at the specific level
+was not recorded in country-wide vaccination records.
+
+Patient lookup information was limited to age, gender, race, and boolean symptom details. So, for the purposes of this database, we created an ideal mock patient dataset that tracked patient cases by these details AND variant they were infected with, so they could be associated with lookups by variant. Unfortunately, for a comprehensive database to work at the patient level, vaccination records would have needed to be recorded by patient, which they were not. So our database DOES work at the case level, to evaluate an individual’s risk based on the metrics available in the PATIENTCASE2 entity, but not in other entities. I.e., the patient entity does not have much use when joined to the other main entities, but has function on its own.
+
+Our idea is that at the hospital level, users can determine risk level of a specific patient due to age, gender, or comorbidity, and other available metrics
+in the sample of PatientCase2. Assuming the sample in the mock dataset is a good estimate of the global population, risk calculations at the hospital level
+can help inform healthcare professionals about susceptibility.
+At the organizational level (like the WHO), a user can use the database across Country, Vaccine, and Variant to determine the distribution of vaccines
+relative to risk level related to unvaccinated percentage, mortality rate, and other extractable metrics.
 
 Target outputs from database application: 
 We plan to market our database to the WHO, an organization formed by the UN in 1948 to promote the wellbeing of people
@@ -32,15 +43,14 @@ impacts, mining patient data, mining scientific literature, and mining social me
 of analyzing global response by mining patient data. Our database will deliver statistics on patient health, but not the anthropological
 context of those statistics, which would require further research outside the scope of our database. 
 
-Main entities: 
-1) Variants of COVID-19 
-2) Countries with COVID-19 case data 
-3) Vaccines in use 
-4) Patient cases 
-a)   In the US 
-b)   In Bangladesh 
-c)   In Mexico 
-d)   Globally, with comorbidities
+Main entities:
+1) Country: countryID (primary key INT)
+2) Vaccine: VaccineID (primary key INT)
+3) Variant: VariantID (primary key INT)
+4) PatientCase: CaseID (primary key INT)
+5) PatientCase2: CaseID (primary key INT)
+6) Country-Vaccine (VaccinationRecord): associative: VaccinationRecordID (primary key INT), CountryID (FK1), VaccineID (FK2)
+7) Country-Variant: associative: CountryVariantID (primary key INT), CountryID (FK1), VariantID (FK2)
 
 Business Needs: 
 Demographic Susceptibility: 
